@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+
+.game-board{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 120px 120px 120px 120px; 
+    grid-template-rows: 120px 120px 120px 20px;
+    justify-content: center;
+    /* max-width: 50vw;
+    min-height: 80vh; */
+    margin: 0 auto;
+}
+
+.cards{
+    background-color: #d9d9d9;
+    border: 2px solid black;
+    /* padding: 20px; */
+    /* max-width: 20vw; */
+    min-height: 20vh;
+    padding-top:20px;
+}
