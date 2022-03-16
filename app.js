@@ -1,5 +1,14 @@
 // cards variables/selectors
-let card = document.querySelector('cards')
-let cards
+const cards = document.querySelectorAll('.cards')
 
+cards.forEach(card => card.addEventListener('click', flipCard))
+
+function flipCard(e){
+    console.log(e.target);
+
+}
+
+function shuffleCards(){
+
+}
 // 

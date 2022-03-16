@@ -10,11 +10,13 @@ body{
     height: 100vh;
 }
 .game-board{
+    background-color: white;
     width: 640px;
     height: 640px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    justify-content: space-evenly;
 
     /* display: grid;
     grid-gap: 50px;
