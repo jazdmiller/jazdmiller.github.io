@@ -6,14 +6,14 @@
 
 body{
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     background-color: black;
 }
 
 .game-board{
     width: 640px;
     height: 640px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
