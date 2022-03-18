@@ -1,63 +1,50 @@
 * {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: black;
-    display: flex;
     height: 100vh;
-}
-.game-board{
-    background-color: white;
-    width: 640px;
-    height: 640px;
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    justify-content: space-evenly;
+    background-color: black;
 }
 
-.cards{
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px); 
-  border: 2px solid black; 
-  position: relative;
-  margin: 5px;
-  border-radius: 5px;
-  perspective: 800px;
-  transform-style: preserve-3d;
+.game-board{
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card{
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position: relative;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+}
+
+.icon, .image{
     position: absolute;
+    border: 2px solid white;
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    transition: transform .25s linear;
+    padding: 20px;
     backface-visibility: hidden;
 }
 
-.cards{
-    transition: transform .25s linear;
-
-}
-/* img{
-    border-radius: 5px;
-} */
-
- /* .cards{
-    backface-visibility: hidden;
-} */
-.image, .cards{
-    /* display: none; */
-    transform: rotateY(-180deg) 
-}
- .cards:hover, .image {
-    transform: rotateY(0);
+img{
+    width: 100%;
 }
 
-.card:hover, .icon{
-    transform: rotateY(180deg)
+.image {
+    transform: rotateY(0.5turn);
+}
+
+.card.flip{
+    transform: rotateY(180deg) perspective(1000px);
 }
