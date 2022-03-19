@@ -4,18 +4,72 @@
     box-sizing: border-box;
 }
 
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: auto;
+    animation: fadeIn 3s;
+    /* border: 2px solid white; */
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+.matches{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+    animation: fadeIn 3s;
+}
+
+.container .yonce{
+    position: absolute;
+    letter-spacing: 9px;
+    color: white;
+    writing-mode: vertical-lr;
+    font-size: 85px;
+    left: -45px;
+    top: 55px;
+    transform: rotate(180deg);
+}
+
+
+  
+.container .deck{
+    position: absolute;
+    letter-spacing: 9px;
+    color: white;
+    writing-mode: vertical-lr;
+    font-size: 85px;
+    right: -45px;
+    bottom: 55px;
+    /* transform: rotate(180deg); */
+}
+
 body{
     height: 100vh;
-    /* display: flex; */
-    background-color: black;
+    background-image: url('./images/bey-bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .game-board{
-    width: 640px;
-    height: 640px;
-    margin: 0 auto;
+    width: 550px;
+    height: 550px;
+    padding: 10px;
+    margin: 8% auto;
     display: flex;
     flex-wrap: wrap;
+    /* background: rgba(210, 215, 211, .5); */
+    border-radius: 5px;
 }
 
 .card{
@@ -29,11 +83,11 @@ body{
 
 .icon, .image{
     position: absolute;
-    border: 2px solid white;
+    border: .8px solid white;
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    padding: 20px;
+    /* padding: 20px; */
     backface-visibility: hidden;
 }
 
@@ -47,4 +101,27 @@ img{
 
 .card.flip{
     transform: rotateY(180deg) perspective(1000px);
+}
+
+button{
+   position: absolute;
+   letter-spacing: 2px;
+   bottom: 50px;
+   left: 46%;
+   font-size: 25px;
+   padding: 10px;
+   background: none;
+   border: 1px solid white;
+   border-radius: 5px;
+   color: white;
+   animation: fadeIn 3s;
+}
+
+button:hover{
+    background: white;
+    color: black;
+}
+
+.icon{
+    background: rgba(40,40,40, 0.7);
 }
